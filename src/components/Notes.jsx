@@ -6,7 +6,7 @@ import '@fontsource/roboto';
 import moment from "moment";
 
 const Notes = ({ myGroupList, setGroupList, selectedItem, setSelectedItem,expanded,setExpanded }) => {
-    console.log(selectedItem);
+    
     const [noteText, setNoteText] = useState('');
     const [myNoteList, setNoteList] = useState([]);
 
@@ -35,8 +35,7 @@ const Notes = ({ myGroupList, setGroupList, selectedItem, setSelectedItem,expand
             });
             const currentDate = new Date();
            const formattedDate= moment(currentDate).format('D MMMM YYYY');
-            console.log(formattedTime);
-            console.log(formattedDate);
+          
             const newNote = {
                 id: selectedItem,
                 time: formattedTime,
@@ -48,14 +47,12 @@ const Notes = ({ myGroupList, setGroupList, selectedItem, setSelectedItem,expand
                 const parsedNoteList = JSON.parse(serializedNoteList);
                 const newArray = [...parsedNoteList, newNote];
                 setNoteList(newArray);
-                console.log(newArray);
                 const serializedList = JSON.stringify(newArray);
                 // Save the serialized list to local storage
                 localStorage.setItem('myNoteList', serializedList);
             } else {
                 const newArray = [newNote];
                 setNoteList(newArray);
-                console.log(newArray);
                 const serializedList = JSON.stringify(newArray);
                 // Save the serialized list to local storage
                 localStorage.setItem('myNoteList', serializedList);
@@ -63,7 +60,15 @@ const Notes = ({ myGroupList, setGroupList, selectedItem, setSelectedItem,expand
             setNoteText('');
         }
     }
-    console.log(selectedItem);
+   const handleKeyPress = (event) => {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+          if(noteText.trim() !== ''){
+            addNotes();
+          }
+        }
+      };
+   
     return (
         <div className={`notesMain ${expanded ? 'expanded' : ''}`}>
             {selectedItem != null ? (<div id="notePage" >
@@ -94,7 +99,8 @@ const Notes = ({ myGroupList, setGroupList, selectedItem, setSelectedItem,expand
                 </div>
                 <div id="bottomDiv">
                     <div id="subBottomDiv">
-                        <textarea rows="4" type="text" id="inputFieldNote" value={noteText} onChange={handleInputChangeNote} placeholder="Enter your text here........" >
+                        <textarea rows="4" type="text" id="inputFieldNote" onKeyDown={handleKeyPress}
+                        value={noteText} onChange={handleInputChangeNote} placeholder="Enter your text here........" >
                         </textarea>
                         <IoSend onClick={addNotes} />
                     </div>
