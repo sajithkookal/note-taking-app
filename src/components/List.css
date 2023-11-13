@@ -1,0 +1,85 @@
+.listMain{
+    width: 25%;
+    height: max-content;
+    display: flex;
+     flex-direction: column;
+      &.expanded {
+      width: 25%;
+    }
+}
+@media only screen and (max-width: 600px) {
+  .listMain {
+    width: 100%;
+    &.expanded {
+      width: 0;
+    }
+  
+  }
+}
+#pocketNotes{
+    font-size: 22px;
+    font-weight: bold;
+    padding: 15px;
+}
+#createNotes{
+    width: fit-content;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-top: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+#paraCreatenotes{
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    display: flex;
+    align-items: center;
+   margin-top: 14px;
+}
+#paraCreatenotes svg {
+    /* margin-top: 10px; */
+    margin-right: 8px;
+}
+#roundDiv {
+    width: 40px; /* Adjust the width and height to make it round */
+    height: 40px;
+    border-radius: 50%; /* Makes the div round */
+    background-color: lightblue; /* Adjust the background color as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .text-inside {
+    color: white; 
+  
+  }
+  ul {
+    list-style-type: none;
+  }
+  #singleItem{
+    margin-left: -25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px 0 0 20px;
+  }
+  #textDiv{
+    margin-left: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0px;
+  }
+  #listDiv{
+    overflow-y: auto;
+  }
+  

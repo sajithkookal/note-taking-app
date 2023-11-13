@@ -1,0 +1,119 @@
+.dialogBackground {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    font-size: 15px;
+    color: black;
+    font-weight: 500;
+}
+
+.dialog-content {
+    position: relative;
+    background-color: #fff;
+    margin: 15% auto;
+    /* Center the dialog vertically and horizontally */
+    padding: 20px;
+    max-width: 400px;
+    /* Adjust the max width as needed */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#label {
+    margin-right: 20px;
+}
+
+#inputField {
+    width: 60%;
+    border: 1.5px solid #aba8a8;
+    border-radius: 10px;
+    padding: 5px;
+    padding-left: 12px;
+}
+
+.dialog-content>p {
+    font-weight: 650;
+    margin-top: 0;
+    margin-bottom: 5%;
+}
+
+#chooseColor {
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+#chooseColor>p {
+    margin-right: 15px;
+}
+
+#purple {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: purple;
+
+}
+
+#pink {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 10px;
+    background-color: rgb(240, 57, 164);
+}
+
+#lightBlue {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 10px;
+    background-color: rgb(75, 183, 219);
+}
+
+#orange {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    border-radius: 50%;
+    background-color: rgb(212, 123, 51);
+}
+
+#blue {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    border-radius: 50%;
+    background-color: rgb(40, 28, 174);
+}
+
+#grey {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    border-radius: 50%;
+    background-color: rgb(61, 105, 151);
+}
+
+#btnCreate {
+    position: absolute;
+    bottom: 10px;
+    right: 12px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    font-size: 0.7rem;
+    font-family:Arial, Helvetica, sans-serif;
+    letter-spacing: 0.6px;
+    font-weight: normal;
+    padding: 3px 20px;
+    border-radius: 6px;
+    
+}

@@ -1,0 +1,121 @@
+.notesMain {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  height: 97%;
+  background-color: #F7ECDC;
+  border-radius: 0 0 0 10px;
+  &.expanded {
+    width: 75%;
+  }
+
+}
+#backArrow{
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  .notesMain {
+    width: 0;
+    &.expanded {
+      width: 100%;
+    }
+  }
+  #backArrow{
+    display: inline-block;
+    margin-right: 8px;
+  
+  }
+}
+#notePage{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #F7ECDC;
+  border-radius: 0 0 0 10px;
+}
+#noteHeading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #e0dfdf;
+
+}
+
+#bottomDiv {
+  border-radius: 0 0 0 10px;
+  background-color: #e0dfdf;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20%;
+}
+
+#inputFieldNote {
+  height: auto;
+  padding: 10px;
+  border: none;
+  width: 95%;
+  border-radius: 7px;
+  resize: none;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+
+}
+
+#subBottomDiv {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  margin: 10px 15px 10px 15px;
+  height: 84%;
+  border-radius: 7px;
+}
+
+#subBottomDiv>svg {
+  position: absolute;
+  color: grey;
+  width: 20px;
+  height: 30px;
+  bottom: 12px;
+  right: 20px;
+}
+
+#middleDiv {
+  height: 70%;
+  width: 100%;
+  overflow-y: auto;
+
+}
+
+#notesDetails {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  width: 100%
+}
+
+#dateAndTime {
+  width: 12%;
+  height: fit-content;
+  color: rgb(34, 33, 33);
+  font-weight: 500;
+  font-size: 0.83rem;
+}
+
+#noteDiscription {
+  max-width: 80%;
+  height: fit-content;
+  margin: 0 auto;
+  word-wrap: break-word;
+  line-height: 1.4;
+  margin-left: 30px;
+  text-align: left;
+  font-size: 0.9rem;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+}
