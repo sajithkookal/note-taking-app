@@ -35,8 +35,7 @@ function Dialog({ isDialogOpen, setDialogOpen, setGroupList }) {
 
     selecteddDiv(true);
     setColour(colourCode);
-    console.log(colourCode);
-    console.log(inputValue);
+  
   };
 
 
@@ -68,9 +67,9 @@ function Dialog({ isDialogOpen, setDialogOpen, setGroupList }) {
                 colour: colour,
 
               };
-              console.log(newItem);
+      
               const storageList = localStorage.getItem('myGroupList');
-              console.log('12', storageList);
+       
               if (storageList) {
                 const parsedList = JSON.parse(storageList);
                 const newArray = [...parsedList, newItem];
@@ -80,15 +79,14 @@ function Dialog({ isDialogOpen, setDialogOpen, setGroupList }) {
                 localStorage.setItem('myGroupList', serializedList);
               } else {
                 const newArray = [newItem];
-                console.log([newArray]);
+                
                 setGroupList(newArray);
                 const serializedList = JSON.stringify(newArray);
                 // Save the serialized list to local storage
                 localStorage.setItem('myGroupList', serializedList);
               }
               const serializedList = localStorage.getItem('myGroupList');
-              console.log('ddssd');
-              console.log(serializedList);
+          
 
               setDialogOpen(false);
             } else {

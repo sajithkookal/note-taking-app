@@ -4,8 +4,7 @@ import { PiPlusBold } from 'react-icons/pi';
 
 
 const List = ({ isDialogOpen, setDialogOpen,myGroupList, setGroupList,selectedItem,setSelectedItem,expanded,setExpanded }) => {
-    console.log('expanded');
-    console.log(expanded);
+    
     useEffect(() => {
         const serializedList = localStorage.getItem('myGroupList');
         if (serializedList) {
