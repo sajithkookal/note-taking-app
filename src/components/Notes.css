@@ -14,6 +14,12 @@
   display: none;
 }
 @media only screen and (max-width: 600px) {
+  #dateAndTime >div{
+    width: 80px;
+  margin-left: -25px;
+    
+  }
+ 
   .notesMain {
     width: 0;
     &.expanded {
@@ -24,7 +30,6 @@
   #backArrow{
     display: inline-block;
     margin-right: 8px;
-  
   }
  
   .sendIcon {
