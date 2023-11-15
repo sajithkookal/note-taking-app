@@ -22,7 +22,7 @@ function App() {
   return (
     <div>
       <div className="Appss">
-        <List
+       <List
           isDialogOpen={isDialogOpen}
           setDialogOpen={setDialogOpen}
           myGroupList={myGroupList}
@@ -31,7 +31,7 @@ function App() {
           setSelectedItem={setSelectedItem} 
           expanded={expanded}
           setExpanded={setExpanded}/>
-        <Notes
+         <Notes
           myGroupList={myGroupList}
           setGroupList={setGroupList}
           selectedItem={selectedItem}

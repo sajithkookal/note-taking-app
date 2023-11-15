@@ -1,5 +1,4 @@
 .notesMain {
-  position: relative;
   display: flex;
   flex-direction: column;
   width: 75%;
@@ -18,7 +17,8 @@
   .notesMain {
     width: 0;
     &.expanded {
-      width: 100%;
+      width: 100vw;
+      
     }
   }
   #backArrow{
@@ -26,9 +26,17 @@
     margin-right: 8px;
   
   }
+ 
+  .sendIcon {
+    display: none;
+    &.visible {
+     display: block;
+      
+    }
+  
+   }
 }
 #notePage{
-  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -48,7 +56,6 @@
 #bottomDiv {
   border-radius: 0 0 0 10px;
   background-color: #e0dfdf;
-  position: absolute;
   bottom: 0;
   width: 100%;
   height: 20%;
@@ -68,6 +75,7 @@
 }
 
 #subBottomDiv {
+  position: relative;
   display: flex;
   flex-direction: row;
   background-color: white;
@@ -77,12 +85,12 @@
 }
 
 #subBottomDiv>svg {
-  position: absolute;
+  position:absolute;
   color: grey;
   width: 20px;
   height: 30px;
-  bottom: 12px;
-  right: 20px;
+  right: 10px;
+  bottom: 5px;
 }
 
 #middleDiv {

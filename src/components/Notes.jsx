@@ -102,7 +102,7 @@ const Notes = ({ myGroupList, setGroupList, selectedItem, setSelectedItem,expand
                         <textarea rows="4" type="text" id="inputFieldNote" onKeyDown={handleKeyPress}
                         value={noteText} onChange={handleInputChangeNote} placeholder="Enter your text here........" >
                         </textarea>
-                        <IoSend onClick={addNotes} />
+                        <IoSend className={`sendIcon ${expanded ? 'visible' : ''}`} onClick={addNotes} />
                     </div>
 
                 </div>
